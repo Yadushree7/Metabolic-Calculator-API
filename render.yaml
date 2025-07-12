@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: calorie-backend
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    envVars:
+      - key: PORT
+        value: 10000
+    buildFilter:
+      paths:
+        - server/**/*
+    autoDeploy: true
+    rootDir: server

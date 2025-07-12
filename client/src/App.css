@@ -1,0 +1,76 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.details {
+  font-family: "Courier New", Courier, monospace;
+  font-size: larger;
+  margin-left: 10px;
+  display: grid;
+  grid-template-columns: 80px auto;
+  row-gap: 10px;
+  column-gap: 50px;
+  align-items: right;
+}
+
+.act,
+.age,
+.height,
+.weight {
+  height: 40px;
+  width: 250px;
+  padding-left: 20px;
+  border-radius: 10px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.act{
+  width:400px;
+}
+
+.gender-group {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.fem,
+.ml {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.details label {
+  display: block;
+  text-align: left;
+}
+
+.sub-but{
+  margin-top: 40px;
+}
+
+table {
+  margin-top: 30px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  /* padding: 12px; */
+  border: 1px solid #7e7e7e;
+}
+
+th {
+  background-color: #1d1d1d; /* Slight grey for header */
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #1a1a1a; /* Hover effect */
+}
