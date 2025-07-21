@@ -44,7 +44,7 @@ def calorie_goal_table(tdee):
 # def home():
 #     return "CALORIE-DEFICIT"
 
-@app.route('/message', methods=['POST'])
+@app.route('/', methods=['POST'])
 def message():
     data = request.json
     
