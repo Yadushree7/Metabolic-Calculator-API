@@ -20,7 +20,7 @@ const Calculator = () => {
     };
 
     try {
-      const response = await fetch("/message", {
+      const response = await fetch("/", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
