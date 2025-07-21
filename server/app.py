@@ -40,9 +40,9 @@ def calorie_goal_table(tdee):
 
 
 
-@app.route('/')
-def home():
-    return "CALORIE-DEFICIT"
+# @app.route('/')
+# def home():
+#     return "CALORIE-DEFICIT"
 
 @app.route('/message', methods=['POST'])
 def message():
