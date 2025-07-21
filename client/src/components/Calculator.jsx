@@ -20,7 +20,7 @@ const Calculator = () => {
     };
 
     try {
-      const response = await fetch("/", {
+      const response = await fetch("https://metabolic-calculator-tj0w.onrender.com/message", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
