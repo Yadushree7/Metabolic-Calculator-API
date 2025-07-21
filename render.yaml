@@ -5,8 +5,11 @@ services:
     plan: free
     rootDir: server
     buildCommand: |
-      cd ../client && npm install && npm run build
-      cd ../server && pip install -r requirements.txt
+      cd ../client
+      npm install
+      npm run build
+      cd ../server
+      pip install -r requirements.txt
     startCommand: python app.py
     envVars:
       - key: PORT
