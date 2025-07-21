@@ -120,6 +120,11 @@ def serve_react(path):
     else:
         return send_from_directory(app.static_folder, "index.html")
 
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory('../client/build', 'favicon.ico')
+
+
 import os
 
 port = int(os.environ.get('PORT', 5000))
