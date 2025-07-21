@@ -6,7 +6,7 @@ services:
     rootDir: server
     buildCommand: |
       cd ../client && npm install && npm run build
-      pip install -r requirements.txt
+      cd ../server && pip install -r requirements.txt
     startCommand: python app.py
     envVars:
       - key: PORT
