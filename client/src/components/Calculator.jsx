@@ -20,7 +20,7 @@ const Calculator = () => {
     };
 
     try {
-      const response = await fetch("http://loaclhost:5000/message", {
+      const response = await fetch("/message", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

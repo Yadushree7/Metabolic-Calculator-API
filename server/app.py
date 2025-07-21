@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 import os
-app = Flask(__name__, static_folder="build", static_url_path="")
+app = Flask(__name__, static_folder="../client/dist", static_url_path="/")
 CORS(app)
 
 def calorie_goal_table(tdee):
@@ -40,9 +40,9 @@ def calorie_goal_table(tdee):
 
 
 
-@app.route('/')
-def home():
-    return "CALORIE-DEFICIT"
+# @app.route('/calorie')
+# def home():
+#     return "CALORIE-DEFICIT"
 
 @app.route('/message', methods=['POST'])
 def message():
@@ -122,4 +122,4 @@ def serve_react(path):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(port=10000)

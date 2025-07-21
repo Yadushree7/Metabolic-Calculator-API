@@ -1,15 +1,18 @@
 services:
   - type: web
-    name: calorie-backend
+    name: calorie-deficit
     env: python
     plan: free
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "python app.py"
+    rootDir: server
+    buildCommand: |
+      cd ../client && npm install && npm run build
+      pip install -r requirements.txt
+    startCommand: python app.py
     envVars:
       - key: PORT
         value: 10000
     buildFilter:
       paths:
         - server/**/*
+        - client/**/*
     autoDeploy: true
-    rootDir: server
