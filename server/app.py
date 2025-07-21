@@ -122,7 +122,7 @@ def serve_react(path):
 
 @app.route('/favicon.ico')
 def favicon():
-    return send_from_directory('../client/build', 'favicon.ico')
+    return send_from_directory(app.static_folder, 'favicon.ico')
 
 
 import os
